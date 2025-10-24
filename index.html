@@ -1,1 +1,94 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Announcement</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 60px;
+    }
+
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      background: #ff0055;
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .marquee-text {
+      display: inline-block;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      padding-left: 100%;
+      animation: scrollText 10s linear infinite;
+    }
+
+    @keyframes scrollText {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .announcement-box {
+     margin-top: 120px;
+      background-color: #f8f8f8;
+      border: 2px solid #ff0055;
+      padding: 30px 40px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 650px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .announcement-box p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .announcement-box strong {
+      color: #ff0055;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="marquee-container">
+    <div class="marquee-text">📢 Announcement 📢</div>
+  </div>
+
+  <div class="announcement-box">
+    <ol>
+      <li>
+   Substation Update পার্টে যেকনো ফিডার বা সোর্স ট্রান্সফর্মার কখন চালু বা বন্ধ হচ্ছে এবং কতক্ষন এর Interruption ছিল সেটার নোটিফিকেশন আসবে। এটার সাথে 
+      অথোরিটির পারমিশন পেলে Sub-Station এর স্ক্যাডা রিলে প্রোগ্রামিং করে অন/অফ পার্ট টা অটো করারও প্ল্যান আছে।
+     </li> <p>
+      <li>
+     Maintaenance এবং Complain এর গাড়ি কোথায় আছে তার লাইভ লোকেশন।
+       </li> <p>
+      <li>
+    যদি স্ক্যাডা রিলেতে প্রোগ্রামিং সিস্টেম Java/Python Language এ থাকে সেক্ষেত্রে প্রতি ঘন্টার লাইভ Load Update করার প্ল্যান আছে।
+</li>
+          </ol>
+  </div>
+
+</body>
+</html>
