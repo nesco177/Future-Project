@@ -1,63 +1,111 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Announcement</title>
-  <style>
-    body {
-      background-color: #ffffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 200px;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Announcement</title>
+    <style>
+        body {
+          background-color: #ffffff;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
 
-    .announcement-box {
-     margin-top: 100px;
-      background-color: #f8f8f8;
-      border: 2px solid #ff0055;
-      padding: 30px 40px;
-      border-radius: 12px;
-      width: 90%;
-      max-width: 650px;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-      text-align: left;
-      font-size: 18px;
-      line-height: 1.8;
-    }
+        .card-container {
+          position: fixed;
+          top: 200px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: grid;
+          grid-template-columns: repeat(2, 4fr);
+          gap: 30px;
+          width: 90%;
+          max-width: 500px;
+          max-height: calc(100vh - 300px);
+          padding-top: 10px;
+          overflow-y: auto;
+        }
 
-    .announcement-box p {
-      font-size: 18px;
-      line-height: 1.6;
-      color: #333;
-    }
+        .announcement-box {
+          background-color: #f8f8f8;
+          border: 2px solid #ff0055;
+          padding: 20px 30px;
+          border-radius: 12px;
+          width: calc(125% - 0px);  /* This makes the box wider and accounts for margin */
+          margin: 0 10px;  /* Adds small margin on the left and right */
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+          font-size: 18px;
+          line-height: 1.8;
+          color: #333;
+        }
 
-    .announcement-box strong {
-      color: #ff0055;
-    }
-  </style>
+        .announcement-box strong {
+          color: #ff0055;
+        }
+
+        .announcement-box ol {
+          padding-left: 10px;
+        }
+
+        .back-button {
+          padding: 10px 20px;
+          background-color: #333;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+          position: fixed;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 10;
+        }
+
+    </style>
 </head>
 <body>
 
-  <div class="announcement-box">
-    <ol>
-      <li>
-   Substation Update পার্টে যেকোনো ফিডার বা সোর্স ট্রান্সফর্মার কখন চালু বা বন্ধ হচ্ছে এবং কতক্ষন এর Interruption ছিল সেটার নোটিফিকেশন আসবে। এটার সাথে 
-      অথোরিটির পারমিশন পেলে Sub-Station এর স্ক্যাডা রিলে ইন্টিগ্রেট করে অন/অফ পার্ট টা অটো করারও প্ল্যান আছে।
-     </li> <p>
-      <li>
-     Maintenance এবং Complain এর গাড়ি কোথায় আছে তার লাইভ লোকেশন।
-       </li> <p>
-      <li>
-    যদি স্ক্যাডা রিলেতে প্রোগ্রামিং সিস্টেম Java/Python Language এ থাকে সেক্ষেত্রে প্রতি ঘন্টার লাইভ Load Update করার প্ল্যান আছে।
-</li>
-          </ol>
-  </div>
+<!-- Card Container -->
+<div class="card-container">
+    <!-- Announcement Box -->
+    <div class="announcement-box">
+        <ol>
+            <li lang="bn">
+                Substation Update পার্টে যেকোনো ফিডার বা সোর্স ট্রান্সফর্মার কখন চালু বা বন্ধ হচ্ছে এবং কতক্ষন এর Interruption ছিল সেটার Live Notification আসবে।
+                অথোরিটির পারমিশন পেলে Sub-Station এর স্ক্যাডা রিলে ইন্টিগ্রেট করে অন/অফ পার্ট টা Automatic করা যেতে পারে
+            </li>
+            </br>
+
+            <li lang="bn">
+                Maintenance এবং Complain এর গাড়ি কোথায় আছে সেটার Live Location
+            </li>
+            </br>
+
+            <li lang="bn">
+                যদি স্ক্যাডা রিলেতে প্রোগ্রামিং সিস্টেম Java/Python/PHP Language এ থাকে সেক্ষেত্রে প্রতি ঘন্টার Auto Load Update করা যেতে পারে
+            </li>
+            </br>
+
+            <li lang="bn">
+                Pre-paid meter এর গ্রাহক এর ফোনে এপ ইন্সটল করা থাকলে এবং Consumer Number সাবমিট করলে প্রতিদিনের Balance Notification
+                এবং ১৫০/২০০ টাকার নিচে নেমে গেলে Recharge Notification (Idea from Jobayer Ahmed, AE)
+            </li>
+            </br>
+
+            <li lang="bn">
+                গ্রাহকের নতুন কানেকশন অথবা মিটার চেঞ্জ এর জন্য ইউজার ফ্রেন্ডলি অনলাইন সিস্টেম। </br>
+                প্ল্যানঃ https://abdullah-nesco.top
+            </li>
+            </br>
+
+        </ol>
+    </div>
+</div>
+
+<!-- Back Button -->
+<button class="back-button" onclick="window.history.back();">Back</button>
 
 </body>
 </html>
